@@ -14,6 +14,7 @@ body {
 .enclosure{
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 .concourse-container {
     display: grid;
@@ -24,10 +25,13 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
 }
 
 .top{
     gap: unset;
+    resize: both;
+    overflow: auto;
 }
 
 .top-row, .bottom-row {
@@ -36,6 +40,9 @@ body {
     justify-content: center;
 }
 
+.bottom-row{
+    flex-direction: row-reverse;
+}
 .left-column, .right-column {
     grid-row: span 2;
     display: flex;
@@ -74,4 +81,8 @@ body {
 .flight:nth-child(odd) {
     background-color: #2c2c2c;
     color: #ffcc00;
+}
+
+.flights{
+    gap: 10px;
 }
